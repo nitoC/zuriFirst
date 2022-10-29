@@ -24,7 +24,7 @@ function App() {
       ref:"http://books.zuri.team",
       id:'books',
       text:'Zuri Books',
-      gloss:" YOur one stop to design and coding books"
+      gloss:" Your one stop to design and coding books"
     },
     {
       ref:"https://books.zuri.team/python-for-beginners?ref_id=Chinedu Mbaodoh",

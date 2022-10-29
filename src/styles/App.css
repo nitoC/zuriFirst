@@ -20,7 +20,8 @@
   position: absolute;
   top:23px;
   right:70px;
-  background-color: gray;
+  background-color: rgb(162, 161, 161);
+  color:white;
   font-weight: bolder;
   padding: .5rem;
   gap: 2px;

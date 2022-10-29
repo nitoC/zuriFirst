@@ -152,14 +152,15 @@ border-radius: 0px;
   font-size: .8rem;
   text-align: justify;
   content: attr(gloss);
-  left: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 5px 15px;
   position: absolute;
   z-index: 98;
   min-width: 150px;
 }
 
-#book__python:hover:before, #pitch:hover:before,#book__design:hover:before {
+#book__python:hover:before, #pitch:hover:before,#books:hover:before,#book__design:hover:before {
   border: solid;
   border-color: #333 transparent;
   border-width: 0 6px 6px 6px;

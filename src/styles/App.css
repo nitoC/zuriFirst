@@ -143,7 +143,7 @@ border-radius: 0px;
   position: relative;
 }
 
-#book__python:hover:after, #pitch:hover:after,#books:hover:after  {
+#book__python:hover:after, #pitch:hover:after,#books:hover:after, #book__design:hover:after  {
   background: rgb(0, 0, 0);
   background: rgba(24, 29, 54, 0.8);
   border-radius: 5px;
@@ -156,10 +156,10 @@ border-radius: 0px;
   padding: 5px 15px;
   position: absolute;
   z-index: 98;
-  min-width: 350px;
+  min-width: 150px;
 }
 
-#book__python:hover:before, #pitch:hover:before,#books:hover:before {
+#book__python:hover:before, #pitch:hover:before,#book__design:hover:before {
   border: solid;
   border-color: #333 transparent;
   border-width: 0 6px 6px 6px;

@@ -1,10 +1,19 @@
 
+import { useEffect, useState } from 'react';
 import '../styles/App.css';
 import Footer from './Footer';
 import Link from './link';
 import Social from './Social';
 
 function App() {
+  const [visibility, setvisibility] = useState('none');
+  const handleDisplay = ()=>{
+    if(visibility==='none'){
+      setvisibility('flex');
+    }else{
+      setvisibility('none')
+    }
+  }
   // eslint-disable-next-line no-lone-blocks
   {/* link props */}
   const data =[
@@ -45,6 +54,17 @@ function App() {
       gloss:'Get a free book on design'
     }
   ]
+
+
+useEffect(() => {
+   window.addEventListener('resize',()=>{
+    setvisibility('none')
+   })
+
+
+}, [window])
+
+
   return (
     <div className="App">
      <header className='app__header'>
@@ -61,7 +81,8 @@ function App() {
        </div>
        <div className='share'><img id='share' src='/icons/_Avatarshare.svg' alt='' /></div>
       </div>
-      <div className='horshare'><img id='horishare' src='/icons/_Avatarmorhori.svg' alt='' /></div>
+      <div className={`mobile__share `} style={{display:visibility}}><img id='share' src='/icons/_Avatarshare.svg' alt='' /> Share</div>
+      <div className='horshare' onClick={handleDisplay}><img id='horishare' src='/icons/_Avatarmorhori.svg' alt='' /></div>
      </header>
      {/*links section */}
      <div className='link__wrapper'>
@@ -73,7 +94,7 @@ function App() {
      {/*slack and git social icon buttons*/}
        <Social/>
      </div>
-     {/* footer with zuri and ingress4 goood logs */}
+     {/* footer with zuri and ingress4goood logs */}
       <Footer/>
     </div>
   );

@@ -1,14 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Pacifico&family=Roboto:wght@100&family=Work+Sans:wght@300&display=swap');
 *{
   padding: 0;
   margin:0;
   box-sizing: border-box;
 }
 :root{
-  --primary:#EAECF0;
-  --text:#101828;
-  --footer:#667085;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
@@ -46,13 +42,13 @@
 
 .links{
   display: block;
-  background-color: var(--primary);
+  background-color: $primary;
   padding: 1.5rem 2rem;
   height:4.75rem;
   text-decoration: none;
   color: var(--text);
   font-size: 1.125rem;
-  border: 1px solid var(--primary);
+  border: 1px solid $primary;
   border-radius: .5rem;
 }
 /**
@@ -131,7 +127,7 @@ color: #667085;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 2rem;
-  border-top: 1px solid var(--primary);
+  border-top: 1px solid $primary;
   gap: 16px;
 }
 #zuri{

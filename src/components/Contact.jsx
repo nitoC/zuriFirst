@@ -13,18 +13,20 @@ function Contact() {
       <form className="form">
         <div className="name">
           <label htmlFor="first_name">
-            first name
+            First name
             <input
               type="text"
               id="first_name"
+              className="name_input"
               placeholder="Enter your first name"
             />
           </label>
           <label htmlFor="last_name">
-            last name
+            Last name
             <input
               type="text"
               id="last_name"
+              className="name_input"
               placeholder="Enter your last name"
             />
           </label>
@@ -42,7 +44,7 @@ function Contact() {
         <label htmlFor="terms">
             <input type="checkbox" id="terms" />
             <div className="check_text">
-                You agree to providing your data to Chinedu Mbaodoh who may contace you
+                You agree to providing your data to Chinedu Mbaodoh who may contact you
             </div>
         </label>
         <div className="button">
@@ -51,8 +53,8 @@ function Contact() {
             </button>
         </div>
       </form>
-      <Footer/>
     </div>
+    <Footer/>
     </div>
   );
 }

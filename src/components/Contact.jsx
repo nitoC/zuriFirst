@@ -48,7 +48,7 @@ function Contact() {
             </div>
         </label>
         <div className="button">
-            <button id="btn_submit">
+            <button id="btn__submit">
                 Send message
             </button>
         </div>

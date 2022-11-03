@@ -5,9 +5,9 @@ function Contact() {
     <div className="contact_wrapper">
     <div className="contact">
       <div className="contact__heading">
-        <div className="heading">Contact me</div>
+        <div className="heading">Contact Me</div>
         <div className="subheading">
-          Hi there, contact me about anythhing you have in mind.
+          Hi there, contact me about anything you have in mind.
         </div>
       </div>
       <form className="form">
@@ -35,13 +35,13 @@ function Contact() {
             Email
             <input type="email" id="email" placeholder="chinedumbaodoh@gmail.com"/>
         </label>
-        <label htmlFor="message">
+        <label className="chackbox_align" htmlFor="message">
             Message
             <textarea name="message" id="message" cols={30} rows={30}>
                 Send me a message and I will reply you as soon as possible
             </textarea>
         </label>
-        <label htmlFor="terms">
+        <label className="checkbox_align" htmlFor="terms">
             <input type="checkbox" id="terms" />
             <div className="check_text">
                 You agree to providing your data to Chinedu Mbaodoh who may contact you

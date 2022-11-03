@@ -4,12 +4,13 @@ $footer:#667085;
 $contact_header: #101828;
 $contact_btn:#1570EF;
 $contact_primary:#475467;
-@import 'contact';
 @import 'App';
+@import 'contact';
 @import 'https://fonts.googleapis.com/css2?family=Inter&family=Pacifico&family=Roboto:wght@100&family=Work+Sans:wght@300&display=swap';
 
 body {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -52,6 +52,11 @@ function App() {
       id:'book__design',
       text:'Design Books',
       gloss:'Get a free book on design'
+    },
+    {
+      ref:"/contact",
+      id:'contact',
+      text:'Contact Me',
     }
   ]
 

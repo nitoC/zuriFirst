@@ -113,6 +113,11 @@
 }
 .socials div{
   padding: .75rem;
+  transition: .3s;
+}
+.socials div:hover{
+  transform: scale(1.3);
+  transition: .3s;
 }
 .footer__text{
   font-style: normal;
@@ -149,6 +154,12 @@ border-radius: 0px;
 .links {
   display: inline;
   position: relative;
+  transition: .3s;
+}
+.links:hover{
+  background-color: #a7aab3b3;
+  transition: .6s;
+  width:99.93%;
 }
 
 #book__python:hover:after, #pitch:hover:after,#books:hover:after, #book__design:hover:after  {

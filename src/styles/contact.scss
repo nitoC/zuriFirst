@@ -63,6 +63,10 @@
       border-radius: 8px;
       outline: none;
     }
+    input:focus{
+        outline:3px solid rgba(0, 255, 255, 0.24);
+        transition: .4s;
+    }
     #message {
       color: $footer;
       font-family: "Inter", sans-serif;
@@ -91,6 +95,11 @@
       border: none;
       height: 2.75rem;
       border-radius: 8px;
+      transition: .6s;
+    }
+    #btn__submit:hover{
+        background-color: #1570efbc;
+        transition: .6s;
     }
   }
 }

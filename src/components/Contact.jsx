@@ -38,7 +38,7 @@ function Contact() {
         <label className="chackbox_align" htmlFor="message">
             Message
             <textarea name="message" id="message" cols={30} rows={30}>
-                Send me a message and I will reply you as soon as possible
+                Send me a message and I'll reply you as soon as possible
             </textarea>
         </label>
         <label className="checkbox_align" htmlFor="terms">

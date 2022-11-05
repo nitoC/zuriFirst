@@ -1,6 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState,useMemo } from 'react'
 import Footer from './Footer.jsx'
+let val =false
 function Contact() {
+  const [ischecked, setischecked] = useState(false)
+  let checked = useMemo(()=>{
+    return ischecked;
+  },[ischecked])
+const [checkStyle , setcheckStyle] =  useState({
+  checkImg: {display:'none', zIndex:-5},
+  inputCheck :{zIndex:3}
+ })
   const [input, setinput] = useState({
     firstName: '',
     lastName: '',
@@ -17,7 +26,6 @@ function Contact() {
   })
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(error)
     if (input.firstName === '' || undefined)
       seterror((prev) => ({
         ...prev,
@@ -54,8 +62,6 @@ function Contact() {
     }, 15000)
   }
   const handleInput = (e) => {
-    console.log(input)
-    console.log(error)
     if (e.target.id === 'first_name') {
       setinput((prev) => ({ ...prev, firstName: e.target.value }))
     }
@@ -68,6 +74,31 @@ function Contact() {
     if (e.target.id === 'email')
       setinput((prev) => ({ ...prev, email: e.target.value }))
   }
+  const handleCheck=()=>{
+    if(checked===false){
+           console.log(checked)
+           console.log(checkStyle)
+           setcheckStyle({
+             checkImg :{display:'inline', zIndex:3},
+             inputCheck : { display:'none',zIndex:-5}
+             
+            })
+            setischecked(true)
+          }
+          if(checked===true){
+          console.log(checked)
+          console.log(checkStyle)
+          setcheckStyle({
+            checkImg : {display:'none', zIndex:-5},
+             inputCheck : {display:'inline-block',zIndex:3}
+           
+          })
+           setischecked(false)
+
+         }
+  }
+  
+  
   return (
     <div className="contact_wrapper">
       <div className="contact">
@@ -145,7 +176,9 @@ function Contact() {
             <span className="erros">{error.message.text}</span>
           </label>
           <label className="checkbox_align" htmlFor="terms">
-            <input onChange={handleInput} type="checkbox" id="terms" />
+            <div className="check_wrap">
+            <input onClick={handleCheck} style={checkStyle.inputCheck} onChange={handleInput} checked={checked} type="checkbox" id="terms" />
+            </div>
             <div className="check_text">
               You agree to providing your data to Chinedu Mbaodoh who may
               contact you
@@ -154,6 +187,9 @@ function Contact() {
               {error.checked.text}
             </span>
           </label>
+          <div className="checkimg_wrap">
+            <span className="check_img" onClick={handleCheck} style={checkStyle.checkImg}><img src='images/input.png' alt='checkbox'/></span>
+          </div>
           <div className="button" onClick={handleSubmit}>
             <button id="btn__submit">Send message</button>
           </div>

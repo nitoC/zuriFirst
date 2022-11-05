@@ -1,6 +1,8 @@
 import React, { useEffect, useState,useMemo } from 'react'
 import Footer from './Footer.jsx'
-let val =false
+import image from '../assets/img/Inpimage.png'
+
+
 function Contact() {
   const [ischecked, setischecked] = useState(false)
   let checked = useMemo(()=>{
@@ -187,8 +189,8 @@ const [checkStyle , setcheckStyle] =  useState({
               {error.checked.text}
             </span>
           </label>
-          <div >
-            <span  onClick={handleCheck} style={checkStyle.checkImg}><img src='../../images/inpimage.png' alt='checkbox'/></span>
+          <div className="checkimg_wrap">
+            <span className="check_img" onClick={handleCheck} style={checkStyle.checkImg}><img src={image} alt='checkbox'/></span>
           </div>
           <div className="button" onClick={handleSubmit}>
             <button id="btn__submit">Send message</button>

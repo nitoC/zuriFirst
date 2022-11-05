@@ -187,7 +187,7 @@ const [checkStyle , setcheckStyle] =  useState({
               {error.checked.text}
             </span>
           </label>
-          <div className="checkimg_wrap">
+          <div >
             <span  onClick={handleCheck} style={checkStyle.checkImg}><img src='../../images/inpimage.png' alt='checkbox'/></span>
           </div>
           <div className="button" onClick={handleSubmit}>

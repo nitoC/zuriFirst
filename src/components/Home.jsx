@@ -1,11 +1,11 @@
 
 import { useEffect, useState } from 'react';
-import '../styles/App.css';
 import Footer from './Footer';
 import Link from './link';
 import Social from './Social';
 
-function App() {
+
+function Home() {
   const [visibility, setvisibility] = useState('none');
   const handleDisplay = ()=>{
     if(visibility==='none'){
@@ -52,6 +52,11 @@ function App() {
       id:'book__design',
       text:'Design Books',
       gloss:'Get a free book on design'
+    },
+    {
+      ref:"/contact",
+      id:'contact',
+      text:'Contact Me',
     }
   ]
 
@@ -100,4 +105,4 @@ useEffect(() => {
   );
 }
 
-export default App;
+export default Home;
